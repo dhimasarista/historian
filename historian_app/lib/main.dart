@@ -33,7 +33,6 @@ class _MyHomePageState extends State<MyHomePage> {
       if (response.statusCode == 200) {
         final responseData = json.decode(response.body);
         final name = responseData["data"]["name"];
-        print(name);
         if (name != null) {
           setState(() {
             _data = name;

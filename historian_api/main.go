@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 
 	"github.com/gofiber/fiber/v2"
@@ -46,7 +45,6 @@ func main() {
 				}
 			}
 		}
-		fmt.Println(dataFetch["name"])
 		return c.JSON(fiber.Map{
 			"data": dataFetch,
 		})
