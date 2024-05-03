@@ -1,0 +1,1 @@
+ C:\\Users\\Lenovo\\Documents\\Coding\\Projects\\Historian\\historian_app\\.dart_tool\\flutter_build\\51646edd68a913fdc93e111fa82f6e41\\native_assets.yaml: 
