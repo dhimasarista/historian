@@ -1,6 +1,7 @@
 package main
 
 import (
+	"historian_api/routes"
 	"strconv"
 
 	"github.com/gofiber/fiber/v2"
@@ -23,12 +24,8 @@ func main() {
 			"age":  22,
 		},
 	}
-
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{
-			"data": "Hello, World!",
-		})
-	})
+	// Routes
+	routes.IndexRoutes(app)
 
 	app.Get("/name/:id", func(c *fiber.Ctx) error {
 		id := c.Params("id")
@@ -49,6 +46,6 @@ func main() {
 			"data": dataFetch,
 		})
 	})
-
+	// Running the App
 	app.Listen(":9999")
 }

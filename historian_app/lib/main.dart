@@ -79,12 +79,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   flex: 20,
                   child: TextField(
                     onChanged: (text) {
+                      if (text.isEmpty) {
+                        setState(() {
+                          _input = 0;
+                        });
+                      }
                       setState(() {
                         _input = int.parse(text);
+                        fetchData();
                       });
                     },
                     keyboardType: TextInputType.number,
-                    
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: 'Enter the ID',
